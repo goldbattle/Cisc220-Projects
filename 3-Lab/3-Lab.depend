@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1425319377 source:c:\users\patrick\github\cisc220-projects\3-lab\lab3main.cpp
+	<time.h>
+	<stdlib.h>
+	<iostream>
+	"lab3lottery.hpp"
+
+1425319275 c:\users\patrick\github\cisc220-projects\3-lab\lab3lottery.hpp
+
+1425319369 source:c:\users\patrick\github\cisc220-projects\3-lab\lab3lottery.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"lab3lottery.hpp"
+
+1425380819 source:c:\users\patrick\github\cisc220-projects\3-lab\ll.cpp
+	<iostream>
+	<stdlib.h>
+	"ll.hpp"
+
+1425380715 c:\users\patrick\github\cisc220-projects\3-lab\ll.hpp
+	<iostream>
+	<stdlib.h>
+	<string>
+	<cctype>
+

@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1426100102 source:c:\users\patrick\github\cisc220-projects\4-lab\main.cpp
+	"LL.hpp"
+	"Node.hpp"
+	<iostream>
+	<stdlib.h>
+	<time.h>
+
+1426086693 c:\users\patrick\github\cisc220-projects\4-lab\ll.hpp
+	"Node.hpp"
+
+1426086496 c:\users\patrick\github\cisc220-projects\4-lab\node.hpp
+
+1426381330 source:c:\users\patrick\github\cisc220-projects\4-lab\ll.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"Node.hpp"
+	"LL.hpp"
+
+1426087278 source:c:\users\patrick\github\cisc220-projects\4-lab\node.cpp
+	"Node.hpp"
+	<iostream>
+	<stdlib.h>
+
