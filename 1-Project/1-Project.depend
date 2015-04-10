@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1428701634 source:c:\users\patrick\github\cisc220-projects\1-project\bsty.cpp
+	"BSTY.h"
+
+1428699315 source:c:\users\patrick\github\cisc220-projects\1-project\ll.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<string>
+	"NodeL.h"
+	"LL.h"
+
+1428699511 c:\users\patrick\github\cisc220-projects\1-project\nodel.h
+	<string>
+
+1428699517 c:\users\patrick\github\cisc220-projects\1-project\ll.h
+	"NodeL.h"
+	<string>
+
+1428702093 source:c:\users\patrick\github\cisc220-projects\1-project\main.cpp
+	"Game.h"
+
+1428699530 source:c:\users\patrick\github\cisc220-projects\1-project\nodel.cpp
+	"NodeL.h"
+	<iostream>
+	<string>
+	<stdlib.h>
+
+1428698124 source:c:\users\patrick\github\cisc220-projects\1-project\nodety.cpp
+
+1428702084 source:c:\users\patrick\github\cisc220-projects\1-project\game.cpp
+	<fstream>
+	<string>
+	"Game.h"
+	"BSTY.h"
+
+1428701987 c:\users\patrick\github\cisc220-projects\1-project\game.h
+	<string>
+	"BSTY.h"
+	"LL.h"
+
+1428701643 c:\users\patrick\github\cisc220-projects\1-project\bsty.h
+	<string>
+
