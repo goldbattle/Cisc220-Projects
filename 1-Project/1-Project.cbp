@@ -44,7 +44,6 @@
 		<Unit filename="NodeTY.h" />
 		<Unit filename="dict-short.txt" />
 		<Unit filename="dict.txt" />
-		<Unit filename="obj/Debug/BSTY.o" />
 		<Extensions>
 			<code_completion />
 			<envvars />

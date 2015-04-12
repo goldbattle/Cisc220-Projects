@@ -112,9 +112,7 @@ void LL::printList() {
     }
     temp->printNode();
     cout << endl;
-    //cout << "here" << endl;
   }
-  cout << "leaving printList " << endl;
   return;
 }
 

@@ -1,8 +1,12 @@
 # depslib dependency file v1.0
-1428701634 source:c:\users\patrick\github\cisc220-projects\1-project\bsty.cpp
+1428790366 source:c:\users\patrick\github\cisc220-projects\1-project\bsty.cpp
+	<string>
+	<iostream>
+	<iomanip>
 	"BSTY.h"
+	"NodeTY.h"
 
-1428699315 source:c:\users\patrick\github\cisc220-projects\1-project\ll.cpp
+1428702742 source:c:\users\patrick\github\cisc220-projects\1-project\ll.cpp
 	<iostream>
 	<stdlib.h>
 	<time.h>
@@ -17,7 +21,8 @@
 	"NodeL.h"
 	<string>
 
-1428702093 source:c:\users\patrick\github\cisc220-projects\1-project\main.cpp
+1428794513 source:c:\users\patrick\github\cisc220-projects\1-project\main.cpp
+	<iostream>
 	"Game.h"
 
 1428699530 source:c:\users\patrick\github\cisc220-projects\1-project\nodel.cpp
@@ -26,19 +31,28 @@
 	<string>
 	<stdlib.h>
 
-1428698124 source:c:\users\patrick\github\cisc220-projects\1-project\nodety.cpp
+1428706341 source:c:\users\patrick\github\cisc220-projects\1-project\nodety.cpp
+	<iostream>
+	"NodeTY.h"
 
-1428702084 source:c:\users\patrick\github\cisc220-projects\1-project\game.cpp
+1428794944 source:c:\users\patrick\github\cisc220-projects\1-project\game.cpp
 	<fstream>
+	<iostream>
 	<string>
+	<stdlib.h>
+	<time.h>
 	"Game.h"
 	"BSTY.h"
 
-1428701987 c:\users\patrick\github\cisc220-projects\1-project\game.h
+1428702698 c:\users\patrick\github\cisc220-projects\1-project\game.h
 	<string>
 	"BSTY.h"
 	"LL.h"
 
-1428701643 c:\users\patrick\github\cisc220-projects\1-project\bsty.h
+1428706492 c:\users\patrick\github\cisc220-projects\1-project\bsty.h
+	<string>
+	"NodeTY.h"
+
+1428704480 c:\users\patrick\github\cisc220-projects\1-project\nodety.h
 	<string>
 
