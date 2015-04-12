@@ -102,6 +102,20 @@ void LL::remove(Node *n) {
   }
 }
 
+string LL::get(int x) {
+    // Check our end points
+    if(x >= currsize || x < 0)
+        return "";
+    // Loop
+    Node* temp = first;
+    for(int c=0; c<x; ++c) {
+        temp = temp->next;
+    }
+    // Return the variables
+    return temp->data;
+}
+
+
 void LL::printList() {
   if (currsize > 0) {
     Node *temp = first;

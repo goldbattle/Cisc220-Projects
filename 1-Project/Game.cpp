@@ -46,10 +46,12 @@ void Game::startGame() {
         }
         // Get random set of letters
         currletters = getLetters(c_letters);
+        // Print the message for the user
+        cout << "Your letters are: " << currletters << "\n" << endl;
         // Call getWords(), get words from the user
         getWords();
         // Call checkWordsForScore(), calc the user's score
-
+        checkWordsForScore();
         // Print score
         cout << "================\n    Score:\n================" << endl;
         cout << "Number right: " << numright << endl;
@@ -86,14 +88,19 @@ char* Game::getLetters(int x) {
     // Data
     char full[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
     char vowel[5] = {'a','e','i','o','u'};
-    char* letters = new char[x];
-    // Pick
+    char* letters = new char[x+1];
+    // Pick vowels
     for(int c=0; c<x/3; ++c) {
         letters[c] = vowel[rand()%5];
     }
+    // Pick from the rest
     for(int c = x/3; c<x; ++c) {
         letters[c] = full[rand()%26];
     }
+    // Add safety char
+    letters[x] = '\0';
+    // Return
+    numletters = x;
     return letters;
 }
 
@@ -114,21 +121,41 @@ void Game::getWords() {
         }
         // If not end, then add the word to the list
         wordlist->push(response);
+        totalwords++;
     }
 }
 
 void Game::checkWordsForScore() {
     // Check the make sure they use valid letters (-1)
-
-    // See if word is in avl tree (+1)
-
-    // Update the player's score
-
+    for(int c=0; c<totalwords; ++c) {
+        // See if word is in avl tree (+1)
+        if(!checkWLetters(wordlist->get(c))) {
+            numright--;
+            continue;
+        }
+        // Update the player's score
+        if(!dict->search(wordlist->get(c))) {
+            numright--;
+            continue;
+        }
+        // Succeess
+        numright++;
+    }
 }
 
 bool Game::checkWLetters(string s) {
     // Check to see if string s has valid chars
-
+    for(int c=0; c<s.size(); ++c) {
+        bool found = false;
+        for(int i=0; i<numletters; ++i) {
+            if(s[c] == currletters[i])
+                found = true;
+        }
+        // If not found, then invalid letter
+        if(!found) {
+            return false;
+        }
+    }
     // Return true if valid string
     return true;
 }

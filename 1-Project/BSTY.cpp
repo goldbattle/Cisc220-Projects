@@ -87,7 +87,6 @@ bool BSTY::search(NodeTY *n, string x) {
     if(n == NULL) {
         return false;
     }
-    //cout << n->data << " : with : " << x << " " << (n->data == x) << endl;
     // Check if we match at all
     if(n->data == x) {
         return true;

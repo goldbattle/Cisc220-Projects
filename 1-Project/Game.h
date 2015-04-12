@@ -12,11 +12,11 @@ class Game {
     public:
 
         BSTY* dict; // the AVL tree
-        LL* wordlist; // linked list of guesses
         int numletters; // the number of letters the user wants
         char* currletters; //the random set of letters
         int numright; // the count of the number of words in the AVL tree
-        int totalwords; // the count of the total number of words generated LL wordlist; // the linked list of words the user typed in.
+        int totalwords; // the count of the total number of words generated
+        LL* wordlist; // the linked list of words the user typed in.
 
 
         /*constructor, initializes AVL tree from “dict.txt” by calling ReadTreeFromFile
