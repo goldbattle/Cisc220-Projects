@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1429847249 source:c:\users\patrick\github\cisc220-projects\8-lab\src\heapa.cpp
+	<iostream>
+	"HeapA.hpp"
+
+1429569606 c:\users\patrick\github\cisc220-projects\8-lab\include\heapa.hpp
+
+1429905025 source:c:\users\patrick\github\cisc220-projects\8-lab\src\heapn.cpp
+	"HeapN.hpp"
+	"NodeN.hpp"
+	<iostream>
+	<math.h>
+
+1429904019 c:\users\patrick\github\cisc220-projects\8-lab\include\heapn.hpp
+	"NodeN.hpp"
+
+1429904330 source:c:\users\patrick\github\cisc220-projects\8-lab\src\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"HeapA.hpp"
+	"HeapN.hpp"
+
+1429716279 c:\users\patrick\github\cisc220-projects\8-lab\include\noden.hpp
+
+1429731067 source:c:\users\patrick\github\cisc220-projects\8-lab\src\noden.cpp
+	"NodeN.hpp"
+	<iostream>
+
+1429847178 source:c:\users\patrick\github\cisc220-projects\8-lab\src\heapk.cpp
+	<iostream>
+	"HeapK.hpp"
+
+1429846707 c:\users\patrick\github\cisc220-projects\8-lab\include\heapk.hpp
+

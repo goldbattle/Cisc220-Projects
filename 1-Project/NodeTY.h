@@ -11,6 +11,7 @@ class NodeTY {
     NodeTY* left;
     NodeTY* right;
 
+    int bal;
     string data;
 
     public:

@@ -56,6 +56,11 @@ void Game::startGame() {
         cout << "================\n    Score:\n================" << endl;
         cout << "Number right: " << numright << endl;
         cout << "Total guesses: " << totalwords << endl;
+        // Reset num right
+        numright = 0;
+        totalwords =  0;
+        delete wordlist;
+        wordlist = new LL();
         // Ask if they want to play again
         string response;
         cout << "Do you want to play again? (yes/no)" << endl;

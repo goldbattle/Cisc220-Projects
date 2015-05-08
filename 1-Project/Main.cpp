@@ -5,15 +5,11 @@ using namespace std;
 
 int main() {
 
-    //LL* temp = new LL();
-    //temp->push("Hello");
-    //temp->push("World!");
-    //
-    //temp->printList();
+    // Make our game file
+    //Game* game = new Game("dict-short.txt");
+    Game* game = new Game("dict.txt");
 
-    Game* game = new Game("dict-short.txt");
-    //Game* game = new Game("dict.txt");
-
+    //cout << endl << endl;
     //game->dict->printTreeio();
     //game->wordlist->printList();
 

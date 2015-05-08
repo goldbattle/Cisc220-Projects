@@ -7,11 +7,13 @@
 using namespace std;
 
 BSTY::BSTY() {
+    // Set the default root
     this->root = NULL;
 }
 
 BSTY::~BSTY() {
-
+    // Don't have to do this cleanup
+    // Only read the tree in once, and never delete it
 }
 
 bool BSTY::insert(string x) {
@@ -24,35 +26,42 @@ bool BSTY::insert(string x) {
     return this->insert(x, root);
 }
 
-bool BSTY::insert(string x, NodeTY *n) {
-    // Add the root if needed
-    if(this->root == NULL) {
-        this->root = n;
+// Pass the pointer in  by address so we can update it
+// This recurses until it finds a null value, then it sets that to the node of interest
+// On return it updates the height based on the height() function
+bool BSTY::insert(string x, NodeTY*& n) {
+    // End condition
+    if(n == NULL) {
+        n = new NodeTY(x);
         return true;
     }
-    // Sort left side
-    if(x <= n->data) {
-        // If null, just insert it
-        if(n->left == NULL) {
-            n->left = new NodeTY(x);
-            return true;
+    // Left side sort
+    else if(x < n->data) {
+        this->insert(x, n->left);
+        // Balance if unequal
+        if(getHeight(n->left) - getHeight(n->right) == 2) {
+            // If we are still correct we just need to rotate once
+            if(x < n->left->data)
+                leftRot(n);
+            else
+                leftLeftRot(n);
         }
-        else {
-            return this->insert(x, n->left);
-        }
+        return true;
     }
-    // Sort the right side
-    else {
-        // If null, just insert it
-        if(n->right == NULL) {
-            n->right = new NodeTY(x);
-            return true;
+    // Right side sort
+    else if(x > n->data) {
+        this->insert(x, n->right);
+        // Balance if unequal
+        if(getHeight(n->left) - getHeight(n->right) == -2) {
+            // If we are still correct we just need to rotate once
+            if(x > n->right->data)
+                rightRot(n);
+            else
+                rightRightRot(n);
         }
-        else {
-            return this->insert(x, n->right);
-        }
+        return true;
     }
-    return true;
+    return false;
 }
 
 
@@ -98,4 +107,42 @@ bool BSTY::search(NodeTY *n, string x) {
         return this->search(n->right, x);
     }
 
+}
+
+void BSTY::leftRot(NodeTY*& n) {
+    NodeTY* temp = n->left;
+    n->left = temp->right;
+    temp->right = n;
+    n = temp;
+}
+
+void BSTY::rightRot(NodeTY*& n) {
+    NodeTY* temp = n->right;
+    n->right = temp->left;
+    temp->left = n;
+    n = temp;
+}
+
+void BSTY::rightRightRot(NodeTY*& n) {
+    leftRot(n->right);
+    rightRot(n);
+}
+
+void BSTY::leftLeftRot(NodeTY*& n) {
+    rightRot(n->left);
+    leftRot(n);
+}
+
+int BSTY::getHeight(NodeTY* n) {
+    // At the end
+    if(n==NULL)
+        return 0;
+    // Recurse down, and compare the left right bal
+    int l_height = getHeight(n->left);
+    int r_height = getHeight(n->right);
+    // Return back up our height
+    if(l_height > r_height)
+        return 1+l_height;
+    else
+        return 1+r_height;
 }

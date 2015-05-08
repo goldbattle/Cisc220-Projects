@@ -40,4 +40,10 @@ int main() {
     temp1->print();
     Test* temp2 = new Test(1,2.2);
     temp2->print();
+
+
+//    cout << "Tesatasdasda" << endl;
+//    int* temp3;
+//    temp3 = 4;
+//    cout << temp3 << endl;
 }

@@ -7,6 +7,7 @@ NodeTY::NodeTY() {
 
 NodeTY::NodeTY(string str) {
     data = str;
+    bal = 0;
     left = NULL;
     right = NULL;
 }

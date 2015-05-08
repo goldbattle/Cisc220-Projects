@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1430077148 source:c:\users\patrick\github\cisc220-projects\9-lab\src\hash1.cpp
+	"Hash1.hpp"
+
+1430077169 c:\users\patrick\github\cisc220-projects\9-lab\include\hash1.hpp
+
+1430077991 source:c:\users\patrick\github\cisc220-projects\9-lab\main.cpp
+	<cmath>
+	<iostream>
+
